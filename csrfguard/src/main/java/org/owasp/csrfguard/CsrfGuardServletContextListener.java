@@ -29,16 +29,18 @@
 
 package org.owasp.csrfguard;
 
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
 import org.apache.commons.lang3.StringUtils;
 import org.owasp.csrfguard.config.overlay.ConfigurationOverlayProvider;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Objects;
 import java.util.Properties;
 
@@ -118,7 +120,7 @@ public class CsrfGuardServletContextListener implements ServletContextListener {
 	 * Has no effect unless the CONFIG_PRINT_PARAM init parameter is "true."
 	 * @param context The ServletContext
 	 * @param prefix  The string used as a prefix when printing the configuration to the log
-	 * @see javax.servlet.ServletContext#log(String)
+	 * @see jakarta.servlet.ServletContext#log(String)
 	 */
 	public static void printConfigIfConfigured(final ServletContext context, final String prefix) {
 		final CsrfGuard csrfGuard = CsrfGuard.getInstance();
@@ -158,7 +160,7 @@ public class CsrfGuardServletContextListener implements ServletContextListener {
                 final File file = new File(fileName);
 
                 if (file.exists()) {
-                    inputStream = new FileInputStream(fileName);
+                    inputStream = Files.newInputStream(Paths.get(fileName));
                 }
             }
 		}
@@ -168,7 +170,7 @@ public class CsrfGuardServletContextListener implements ServletContextListener {
 			final File file = new File(resourceName);
 
 			if (file.exists()) {
-				inputStream = new FileInputStream(resourceName);
+				inputStream = Files.newInputStream(Paths.get(resourceName));
 			}
 		}
 

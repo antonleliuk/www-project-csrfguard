@@ -29,12 +29,12 @@
 
 package org.owasp.csrfguard.action;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.owasp.csrfguard.CsrfGuard;
 import org.owasp.csrfguard.CsrfGuardException;
 import org.owasp.csrfguard.session.LogicalSession;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.Objects;
 
 public final class Invalidate extends AbstractAction {

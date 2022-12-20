@@ -29,15 +29,15 @@
 
 package org.owasp.csrfguard.http;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponseWrapper;
 import org.owasp.csrfguard.CsrfGuard;
 import org.owasp.csrfguard.CsrfValidator;
 import org.owasp.csrfguard.ProtectionResult;
 import org.owasp.csrfguard.session.LogicalSession;
 import org.owasp.csrfguard.token.service.TokenService;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpServletResponseWrapper;
 import java.io.IOException;
 import java.util.Objects;
 

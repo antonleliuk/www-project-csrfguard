@@ -29,6 +29,7 @@
 
 package org.owasp.csrfguard.config;
 
+import jakarta.servlet.ServletConfig;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.owasp.csrfguard.action.IAction;
@@ -45,7 +46,6 @@ import org.owasp.csrfguard.util.RegexValidationUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.servlet.ServletConfig;
 import java.io.IOException;
 import java.io.InputStream;
 import java.security.*;

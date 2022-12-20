@@ -28,6 +28,7 @@
  */
 package org.owasp.csrfguard.token.service;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.owasp.csrfguard.CsrfGuard;
 import org.owasp.csrfguard.CsrfGuardException;
 import org.owasp.csrfguard.CsrfValidator;
@@ -43,7 +44,6 @@ import org.owasp.csrfguard.token.transferobject.TokenTO;
 import org.owasp.csrfguard.util.CsrfGuardUtils;
 import org.owasp.csrfguard.util.MessageConstants;
 
-import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;

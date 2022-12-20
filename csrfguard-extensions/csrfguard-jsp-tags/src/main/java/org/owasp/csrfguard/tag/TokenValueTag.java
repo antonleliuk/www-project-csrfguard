@@ -29,10 +29,10 @@
 
 package org.owasp.csrfguard.tag;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.owasp.csrfguard.CsrfGuard;
 import org.owasp.csrfguard.session.LogicalSession;
 
-import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.Objects;
 

@@ -28,9 +28,9 @@
  */
 package org.owasp.csrfguard.token.storage;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.owasp.csrfguard.session.LogicalSession;
 
-import javax.servlet.http.HttpServletRequest;
 
 public interface LogicalSessionExtractor {
 

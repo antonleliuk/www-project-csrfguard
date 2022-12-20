@@ -28,10 +28,10 @@
  */
 package org.owasp.csrfguard.session;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import org.owasp.csrfguard.token.storage.LogicalSessionExtractor;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.util.Objects;
 
 public class SessionTokenKeyExtractor implements LogicalSessionExtractor {

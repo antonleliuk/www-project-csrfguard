@@ -28,8 +28,6 @@
  */
 package org.owasp.csrfguard.session;
 
-import javax.servlet.http.HttpSession;
-
 /**
  * Represents a logical session that enables decoupling from the container's session implementation in case the client application uses a stateless approach (e.g. token based authentication)
  */
@@ -45,7 +43,7 @@ public interface LogicalSession {
      * Returns <code>true</code> if the client does not yet know about the
      * session or if the client chooses not to join the session.
      *
-     * @see javax.servlet.http.HttpSession#isNew()
+     * @see jakarta.servlet.http.HttpSession#isNew()
      *
      * @return <code>true</code> if the server has created a session, but the client has not yet joined
      */
@@ -71,7 +69,7 @@ public interface LogicalSession {
     /**
      * Saves an object to the current session
      *
-     * @see HttpSession#setAttribute(java.lang.String, java.lang.Object)
+     * @see jakarta.servlet.http.HttpSession#setAttribute(java.lang.String, java.lang.Object)
      *
      * @param attribute the name to which the object is bound; cannot be null
      * @param value the object to be bound
@@ -81,7 +79,7 @@ public interface LogicalSession {
     /**
      * Retrieves an object from the session using its name
      *
-     * @see HttpSession#getAttribute(String)
+     * @see jakarta.servlet.http.HttpSession#getAttribute(String)
      *
      * @param attributeName - identifies a certain object on the session
      * @return the object associated to the attribute name

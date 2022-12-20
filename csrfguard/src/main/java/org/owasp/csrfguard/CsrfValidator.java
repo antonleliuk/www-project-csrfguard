@@ -28,6 +28,8 @@
  */
 package org.owasp.csrfguard;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.apache.commons.lang3.StringUtils;
 import org.owasp.csrfguard.action.IAction;
 import org.owasp.csrfguard.servlet.JavaScriptServlet;
@@ -42,8 +44,6 @@ import org.owasp.csrfguard.util.RegexValidationUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.Objects;
 import java.util.Set;
 import java.util.function.UnaryOperator;

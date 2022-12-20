@@ -29,6 +29,8 @@
 
 package org.owasp.csrfguard.util;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.owasp.csrfguard.CsrfGuard;
@@ -37,12 +39,11 @@ import org.owasp.csrfguard.token.transferobject.TokenTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Enumeration;
@@ -100,7 +101,7 @@ public final class CsrfGuardUtils {
     }
 
     public static String readFileContent(final String fileNameWithAbsolutePath) {
-        try (final InputStream inputStream = new FileInputStream(fileNameWithAbsolutePath)) {
+        try (final InputStream inputStream = Files.newInputStream(Paths.get(fileNameWithAbsolutePath))) {
             return readInputStreamContent(inputStream);
         } catch (final IOException ioe) {
             throw new RuntimeException(ioe);

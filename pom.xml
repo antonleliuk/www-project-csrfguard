@@ -147,23 +147,46 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>servlet-api</artifactId>
-                <version>${servlet-api.version}</version>
+                <groupId>jakarta.servlet</groupId>
+                <artifactId>jakarta.servlet-api</artifactId>
+                <version>6.0.0</version>
                 <scope>provided</scope>
             </dependency>
+
             <dependency>
-                <groupId>javax.servlet.jsp</groupId>
-                <artifactId>jsp-api</artifactId>
-                <version>${jsp-api.version}</version>
+                <groupId>jakarta.servlet.jsp</groupId>
+                <artifactId>jakarta.servlet.jsp-api</artifactId>
+                <version>3.1.0</version>
                 <scope>provided</scope>
             </dependency>
+
             <dependency>
-                <groupId>javax.servlet.jsp.jstl</groupId>
-                <artifactId>jstl-api</artifactId>
-                <version>${jstl.version}</version>
+                <groupId>jakarta.servlet.jsp.jstl</groupId>
+                <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+                <version>3.0.0</version>
                 <scope>provided</scope>
             </dependency>
+
+
+
+            <!--            <dependency>-->
+<!--                <groupId>javax.servlet</groupId>-->
+<!--                <artifactId>servlet-api</artifactId>-->
+<!--                <version>${servlet-api.version}</version>-->
+<!--                <scope>provided</scope>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>javax.servlet.jsp</groupId>-->
+<!--                <artifactId>jsp-api</artifactId>-->
+<!--                <version>${jsp-api.version}</version>-->
+<!--                <scope>provided</scope>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>javax.servlet.jsp.jstl</groupId>-->
+<!--                <artifactId>jstl-api</artifactId>-->
+<!--                <version>${jstl.version}</version>-->
+<!--                <scope>provided</scope>-->
+<!--            </dependency>-->
 
             <dependency>
                 <groupId>org.apache.commons</groupId>

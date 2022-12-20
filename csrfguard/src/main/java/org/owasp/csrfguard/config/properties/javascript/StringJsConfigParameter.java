@@ -29,9 +29,9 @@
 
 package org.owasp.csrfguard.config.properties.javascript;
 
+import jakarta.servlet.ServletConfig;
 import org.owasp.csrfguard.config.properties.PropertyUtils;
 
-import javax.servlet.ServletConfig;
 import java.util.Properties;
 
 public class StringJsConfigParameter extends JsConfigParameter<String> {
